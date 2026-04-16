@@ -6,63 +6,7 @@ A prototype tool for Contentstack's BizOps team to identify at-risk renewals bef
 
 ## Architecture
 
-```
-┌─────────────────────────────────────────────────────────────────┐
-│                      DATA INGESTION LAYER                       │
-│  accounts.csv  usage_metrics.csv  support_tickets.csv           │
-│  nps_responses.csv   csm_notes.txt   changelog.md               │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    DATA RECONCILIATION                          │
-│  • Fuzzy name matching (difflib + manual corrections)           │
-│  • Multi-strategy account ID resolution                         │
-│  • Language detection for NPS comments                          │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                    FEATURE ENGINEERING                          │
-│  • Usage decline trends (6-month API call & user trajectories)  │
-│  • Ticket severity (P1 count, stale tickets, escalations)       │
-│  • SDK deprecation risk (v3.x) + security risk (CVE-2026-1102)  │
-│  • NPS anomaly detection (score vs. comment sentiment mismatch) │
-│  • Regulated-industry amplifiers                                │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│              LLM ANALYZER  (Claude claude-sonnet-4-20250514)        │
-│  • Structured risk signal extraction from messy CSM notes       │
-│  • Sentiment scoring with competitor & stakeholder detection     │
-│  • Plain-English account explanations for BizOps/CS teams       │
-│  • Cross-account non-obvious insight detection                  │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                       RISK SCORER                               │
-│  Weighted composite (usage 25% | CSM sentiment 20% |            │
-│  tickets 20% | SDK 15% | NPS 10% | urgency 10%)                 │
-│  + situational bonuses for competitive threat, C-suite, etc.    │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                   INSIGHT DETECTOR                              │
-│  Rule-based + LLM-based cross-account pattern detection         │
-└──────────────────────────────┬──────────────────────────────────┘
-                               │
-                               ▼
-┌─────────────────────────────────────────────────────────────────┐
-│                      OUTPUT LAYER                               │
-│  • Risk-scored account list (High / Medium / Low)               │
-│  • Per-account plain-English explanations                       │
-│  • Non-obvious insights with account names                      │
-│  • JSON report  +  Streamlit dashboard  +  Rich CLI             │
-└─────────────────────────────────────────────────────────────────┘
-```
+<img width="1440" height="2584" alt="image" src="https://github.com/user-attachments/assets/87112097-d62a-4d99-b847-8c7a539310b2" />
 
 ---
 
@@ -85,30 +29,16 @@ The changelog reveals two independent risk vectors:
 - **CVE-2026-1102**: unpatched in v4.0–v4.2.3, only fixed in v4.3.2 — affects accounts that upgraded away from v3 but haven't kept current
 - **Regulated-industry amplifier**: SDK/security risk scores are multiplied for Healthcare, Financial Services, Insurance, and Government accounts where compliance failures are contractual dealbreakers
 
-### 4. LLM Usage (Claude)
-Claude is used meaningfully at three points — not as a gimmick:
+### 4. LLM Usage
+ used meaningfully at three points — not as a gimmick:
 1. **CSM note analysis**: Extract structured signals (sentiment, competitors, executive involvement, action items) from intentionally messy, inconsistently formatted notes
 2. **Explanation generation**: Produce a concise, evidence-backed plain-English summary for each at-risk account targeted at a BizOps/CS audience
 3. **Cross-account insight detection**: Identify patterns across the full renewal cohort that a per-account rule engine would never surface
 
-All LLM calls include full product context (changelog deprecation dates, CVEs) so Claude's analysis is grounded in real product events — not just tone-reading.
+All LLM calls include full product context (changelog deprecation dates, CVEs)  analysis is grounded in real product events — not just tone-reading.
 
 ### 5. Ticket Age as a Signal
 Open ticket age (days since creation) is tracked and surfaced. Tickets open for 45+ days at renewal time are a leading indicator of contention — customers use unresolved issues as leverage for discounts or as justification to evaluate alternatives. This is not captured in a simple P1-count feature.
-
----
-
-## Tradeoffs
-
-| Decision | Tradeoff | Rationale |
-|---|---|---|
-| Rule-based scoring + LLM enhancement | Less sophisticated than a trained ML model | Interpretable, auditable, sufficient for a prototype; no historical churn labels available |
-| Fuzzy matching for name reconciliation | May miss low-similarity matches | Handles the intentional inconsistencies in the dataset cleanly |
-| Flag NPS anomalies vs. discard them | Partial signal loss | Using corrupted data confidently is worse than down-weighting it |
-| Anthropic SDK (Claude) | Not using OpenAI | Claude's instruction-following and JSON output reliability is strong; aligns with the Anthropic context |
-| Separate deprecated vs. vulnerable SDK tracks | Slightly more complex | CVE-2026-1102 affects v4.x accounts that think they are safe — conflating the two would miss this |
-| 90-day renewal window | May miss medium-term risk | Aligns with assignment scope; production would extend to 180 days |
-
 ---
 
 ## What I'd Do With More Time
@@ -125,7 +55,7 @@ Open ticket age (days since creation) is tracked and surfaced. Tickets open for 
 
 1. **Pipeline scheduling** — daily refresh via Airflow or Prefect; incremental updates for large datasets
 2. **LLM cost management** — cache explanations by account+data-hash; batch API calls; consider a fine-tuned smaller model for CSM note classification
-3. **Governance & audit trail** — log why each account was scored as-it-was; immutable history for compliance
+3. **Governance & audit trail** — log whay each account was scored as-it-was; immutable history for compliance
 4. **Permissions** — CSMs see only their own accounts; VP/BizOps see full dashboard
 5. **SLA** — risk scores should be <1 hour stale for accounts renewing within 14 days
 6. **Export** — push risk tier + explanation to Salesforce custom object so AEs see it in their normal workflow
