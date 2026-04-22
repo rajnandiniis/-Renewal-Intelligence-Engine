@@ -38,7 +38,7 @@ our finance team but they haven't responded. Two missed QBRs in a row.
 
 ---
 
-Apr 1 - vanguard retail
+Apr 1 - vanguard retail 
 just a quick note: they've stopped using workflows entirely since the Feb update broke
 their automation. they filed a ticket but it's been open for 6 weeks. the ops manager 
 told me she's "lost faith in the roadmap." she used to be our biggest champion there.

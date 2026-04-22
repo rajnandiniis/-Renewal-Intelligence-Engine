@@ -1,16 +1,16 @@
 {
-  "generated_at": "2026-04-16T20:54:46.291194",
+  "generated_at": "2026-04-22T20:21:53.655483",
   "reference_date": "2026-04-15",
   "renewal_window": 90,
   "summary": {
     "total": 30,
-    "high": 7,
-    "medium": 5,
-    "low": 18,
+    "high": 8,
+    "medium": 8,
+    "low": 14,
     "arr_at_risk": {
-      "High": 2040000.0,
-      "Medium": 1900000.0,
-      "Low": 10689000.0,
+      "High": 2233000.0,
+      "Medium": 5022000.0,
+      "Low": 7374000.0,
       "Total": 14629000.0
     }
   },
@@ -45,17 +45,18 @@
       "key_stakeholders": [
         "CTO"
       ],
-      "explanation": "The primary risk driver for NovaTech Industries is the deprecation of SDK v3.2.0, which has led to multiple critical issues, including four P1 tickets in the last month and significant engineering resources spent on workarounds. This is further evidenced by a drastic decline in API calls by 72.0% and active users by 66.7%. The BizOps/CS team must prioritize providing a clear migration path to the client within the next 7 days to address the CTO's urgent concerns and mitigate the risk of non-renewal.",
+      "explanation": "The primary risk driver for NovaTech Industries is the deprecation of SDK v3.2.0, which has led to significant operational challenges, as evidenced by their engineering team spending over 200 hours on workarounds and the CTO's direct inquiry about a migration path. Supporting this risk, the API call change has decreased by 72.0% over the past six months, indicating a sharp decline in engagement. The team must prioritize a meeting with NovaTech's CTO within the next 7 days to address their concerns and outline a clear migration strategy to retain the account.",
       "csm_risk_signals": [
+        "Extremely tense call.",
         "They've had 4 P1 tickets in the last month, all related to the v3 SDK deprecation.",
         "Their engineering team spent 200+ hours on workarounds.",
         "CTO joined the call and asked point blank if we have a migration path.",
-        "I couldn't give a timeline for the migration path."
+        "They mentioned Strapi and Sanity by name."
       ],
       "csm_action_items": [
-        "Escalate the issue regarding the migration path.",
-        "Provide a timeline for the migration path.",
-        "Address the P1 tickets related to the v3 SDK deprecation."
+        "Escalate the issue regarding the SDK deprecation.",
+        "Provide a clear migration path and timeline to the customer.",
+        "Address the P1 tickets and workarounds experienced by the engineering team."
       ]
     },
     {
@@ -85,16 +86,16 @@
         "Contentful"
       ],
       "key_stakeholders": [],
-      "explanation": "The primary risk driver for Pinnacle Media Group's renewal is significant dissatisfaction stemming from a mid-cycle price increase, which has led to threats of switching to Contentful. This is further evidenced by a low Net Promoter Score (NPS) of 6 and a negative sentiment score of -0.5. Additionally, the API call change shows a drastic decline of 59.5% over the past six months, indicating reduced engagement. The team must schedule a meeting with the billing team within the next 7 days to address their concerns and discuss potential solutions to mitigate the risk of churn.",
+      "explanation": "The primary risk driver for Pinnacle Media Group's renewal is significant dissatisfaction stemming from a mid-cycle price increase, which has led to threats of switching to Contentful. This is evidenced by the billing team's furious response and the missed QBRs, indicating potential disengagement. Additionally, the API call change has decreased by 59.5%, reflecting reduced usage and engagement with the service. The team must prioritize addressing the billing concerns and re-engaging the client within the next 7 days to mitigate the risk of non-renewal.",
       "csm_risk_signals": [
-        "The billing team is furious about the mid-cycle price increase.",
-        "They threatened to go to Contentful.",
-        "There have been two missed QBRs in a row."
+        "billing team is furious about the mid-cycle price increase",
+        "threatened to go to Contentful",
+        "two missed QBRs in a row"
       ],
       "csm_action_items": [
-        "Set up a call with the finance team.",
-        "Follow up with Pinnacle Media Group regarding the missed QBRs.",
-        "Address the billing team's concerns about the price increase."
+        "set up a call with the finance team",
+        "follow up on missed QBRs",
+        "address billing concerns"
       ]
     },
     {
@@ -107,7 +108,7 @@
       "csm_name": "Emily Watson",
       "contract_end_date": "2026-06-03 00:00:00",
       "days_to_renewal": 49,
-      "risk_score": 0.9,
+      "risk_score": 0.95,
       "risk_tier": "High",
       "sdk_version": "v3.4.1",
       "on_deprecated_sdk": true,
@@ -124,18 +125,57 @@
       "key_stakeholders": [
         "CISO"
       ],
-      "explanation": "The primary risk driver for Atlas Financial's renewal is their concern over the lack of single-tenancy options, which is critical for their regulated industry. This concern was highlighted during the quarterly business review, where they expressed that this issue is a dealbreaker for them. Additionally, the API call change has decreased by 51.2%, indicating a significant drop in engagement. The team must address the single-tenancy options and provide a clear response to Atlas Financial within the next 7 days to mitigate the risk of non-renewal.",
+      "explanation": "The primary risk driver for Atlas Financial's renewal is their significant concerns regarding compliance and product limitations, as evidenced by their CISO's involvement during the quarterly business review and inquiries about the SOC 2 audit timeline and single-tenancy options. Additionally, the API call change has decreased by 51.2%, indicating reduced engagement with the product. The team must address these compliance concerns and provide clarity on the SOC 2 audit timeline within the next 7 days to mitigate the renewal risk.",
       "csm_risk_signals": [
-        "The quarterly business review went poorly.",
-        "They asked about our SOC 2 audit timeline and expressed concern that we're behind.",
-        "They inquired about single-tenancy options, which we don't offer on their current plan.",
-        "Being in a regulated industry, the lack of single-tenancy options is a dealbreaker.",
-        "They are currently using SDK v3.1 and hitting deprecated endpoints daily."
+        "Quarterly business review went poorly.",
+        "They brought their CISO and asked about our SOC 2 audit timeline.",
+        "Asked about single-tenancy options which we don't offer on their current plan.",
+        "In a regulated industry so this is a dealbreaker if we can't address it.",
+        "Hitting the deprecated endpoints daily."
       ],
       "csm_action_items": [
-        "Address the SOC 2 audit timeline concerns.",
+        "Address SOC 2 audit timeline concerns.",
         "Explore options for single-tenancy solutions.",
-        "Provide guidance on transitioning from deprecated SDK endpoints."
+        "Provide support for deprecated SDK endpoints."
+      ]
+    },
+    {
+      "account_id": 1001,
+      "account_name": "BrightPath Solutions",
+      "arr": 21000.0,
+      "plan_tier": "Starter",
+      "industry": "Travel & Hospitality",
+      "region": "NA-East",
+      "csm_name": "Sarah Chen",
+      "contract_end_date": "2026-07-04 00:00:00",
+      "days_to_renewal": 80,
+      "risk_score": 0.9425,
+      "risk_tier": "High",
+      "sdk_version": "v3.2.0",
+      "on_deprecated_sdk": true,
+      "on_vulnerable_sdk": false,
+      "nps_score": 8,
+      "nps_anomaly": false,
+      "nps_language": "en",
+      "usage_decline_pct": -56.88158137816368,
+      "p1_ticket_count": 6,
+      "open_ticket_count": 6,
+      "max_open_days": 195,
+      "recurring_count": 5,
+      "competitive_threats": [],
+      "key_stakeholders": [
+        "CTO"
+      ],
+      "explanation": "The primary risk driver for BrightPath Solutions' renewal is their significant budget cut of 20% across all SaaS vendors, which raises concerns about their commitment to renewing their contract. This is further supported by a drastic decline in active users, which has decreased by 50.0% over the past six months. The team must reach out to the customer within the next 7 days to schedule a call and discuss their current needs and any potential concerns regarding the renewal.",
+      "csm_risk_signals": [
+        "No show for the third time this quarter",
+        "Team has been pulled into a CMS evaluation project led by their CTO",
+        "Budget was cut 20% across all SaaS vendors"
+      ],
+      "csm_action_items": [
+        "Follow up to reschedule the missed calls",
+        "Inquire about the CMS evaluation project and its impact on current usage",
+        "Discuss potential budget concerns and explore options for support"
       ]
     },
     {
@@ -165,57 +205,13 @@
       "key_stakeholders": [
         "ops manager"
       ],
-      "explanation": "The primary risk driver for Vanguard Retail's renewal is their complete cessation of workflow usage due to a broken automation from a February update, which has led to a significant loss of confidence in the product's roadmap, as expressed by the ops manager. Supporting this risk, the NPS score is notably low at 2, indicating poor customer satisfaction. The team must prioritize resolving the open P1 ticket, which has been pending for 6 weeks, within the next 7 days to address the immediate concerns and improve the customer's sentiment.",
+      "explanation": "The primary risk driver for Vanguard Retail's renewal is their complete cessation of workflow usage due to a broken automation update, which has led the operations manager to express a loss of faith in the product's roadmap. This sentiment is further underscored by a low NPS score of 2 and a negative sentiment rating of -0.7. To address this high renewal risk, the BizOps/CS team must prioritize resolving the open ticket that has remained unresolved for six weeks within the next 7 days.",
       "csm_risk_signals": [
-        "They've stopped using workflows entirely since the February update broke their automation.",
-        "The ticket they filed has been open for 6 weeks.",
-        "The ops manager expressed that she's 'lost faith in the roadmap.'",
-        "The ops manager used to be the biggest champion for the product."
+        "they've stopped using workflows entirely since the Feb update broke their automation",
+        "the ops manager told me she's 'lost faith in the roadmap'",
+        "the ticket has been open for 6 weeks"
       ],
-      "csm_action_items": [
-        "Follow up on the open P1 ticket.",
-        "Address the concerns raised by the ops manager regarding the roadmap.",
-        "Investigate the issues with the February update that broke automation."
-      ]
-    },
-    {
-      "account_id": 1001,
-      "account_name": "BrightPath Solutions",
-      "arr": 21000.0,
-      "plan_tier": "Starter",
-      "industry": "Travel & Hospitality",
-      "region": "NA-East",
-      "csm_name": "Sarah Chen",
-      "contract_end_date": "2026-07-04 00:00:00",
-      "days_to_renewal": 80,
-      "risk_score": 0.8925,
-      "risk_tier": "High",
-      "sdk_version": "v3.2.0",
-      "on_deprecated_sdk": true,
-      "on_vulnerable_sdk": false,
-      "nps_score": 8,
-      "nps_anomaly": false,
-      "nps_language": "en",
-      "usage_decline_pct": -56.88158137816368,
-      "p1_ticket_count": 6,
-      "open_ticket_count": 6,
-      "max_open_days": 195,
-      "recurring_count": 5,
-      "competitive_threats": [],
-      "key_stakeholders": [
-        "CTO"
-      ],
-      "explanation": "The primary risk driver for BrightPath Solutions is their significant budget cut of 20% across all SaaS vendors, which raises concerns about their ability to renew their contract. This is further supported by a drastic decline in active users by 50.0% and a 56.9% decrease in API calls over the past six months. The team must reach out to the account within the next 7 days to discuss their current challenges and explore potential solutions to mitigate the renewal risk.",
-      "csm_risk_signals": [
-        "The account has missed three calls this quarter.",
-        "The team has been pulled into a CMS evaluation project.",
-        "Budget was cut 20% across all SaaS vendors."
-      ],
-      "csm_action_items": [
-        "Follow up with the account to reschedule missed calls.",
-        "Inquire about the CMS evaluation project and its impact on the account.",
-        "Discuss budget constraints and explore potential solutions."
-      ]
+      "csm_action_items": []
     },
     {
       "account_id": 1007,
@@ -246,18 +242,17 @@
       "key_stakeholders": [
         "CRO"
       ],
-      "explanation": "Zenith Publishing is at high risk of not renewing their contract primarily due to their request for a 30% discount, indicating dissatisfaction with the current pricing structure. This concern is further supported by a significant decline in active users, which has dropped by 56.8% over the past six months. The team must engage with Zenith Publishing within the next 7 days to address their concerns and negotiate terms that could facilitate renewal.",
+      "explanation": "Zenith Publishing is at high renewal risk primarily due to their demand for a 30% discount, indicating dissatisfaction with the current product and a willingness to leave if their request is not met. This sentiment is further supported by a significant decline in API calls by 61.8% and active users by 56.8% over the past six months. The team must engage with Zenith Publishing within the next 7 days to address their concerns and negotiate terms that could prevent them from moving to a competitor.",
       "csm_risk_signals": [
-        "Zenith Publishing is requesting a 30% discount or they will not renew.",
-        "The current ARR is high, but their margin is already thin.",
-        "Editor performance on their library is painful.",
-        "A competitor proof of concept with Kontent.ai is already underway.",
-        "The CRO was cc'd on the last email thread."
+        "They want a 30% discount or they walk.",
+        "Editor performance on their 50k+ entry library is painful.",
+        "Competitor POC with Kontent.ai is apparently already underway.",
+        "CRO was cc'd on the last email thread which is never a good sign."
       ],
       "csm_action_items": [
-        "Evaluate the feasibility of offering a 30% discount.",
-        "Address the performance issues with the editor.",
-        "Follow up on the competitor proof of concept."
+        "Evaluate the possibility of offering a discount.",
+        "Address the editor performance issues.",
+        "Follow up on the competitor POC status."
       ]
     },
     {
@@ -270,7 +265,7 @@
       "csm_name": "Carlos Mendez",
       "contract_end_date": "2026-05-25 00:00:00",
       "days_to_renewal": 40,
-      "risk_score": 0.6575,
+      "risk_score": 0.8875,
       "risk_tier": "High",
       "sdk_version": "v3.2.0",
       "on_deprecated_sdk": true,
@@ -283,11 +278,23 @@
       "open_ticket_count": 2,
       "max_open_days": 97,
       "recurring_count": 0,
-      "competitive_threats": [],
-      "key_stakeholders": [],
-      "explanation": "The primary risk driver for Acme Corp's renewal is the significant decline in API calls, which have decreased by 52.2% over the past six months. Additionally, there has been a 50% reduction in active users, further indicating potential disengagement. To address this risk, the team must reach out to Acme Corp within the next 7 days to discuss their usage and any concerns they may have regarding the deprecated SDK version 3.2.0, with patches ending on April 30.",
-      "csm_risk_signals": [],
-      "csm_action_items": []
+      "competitive_threats": [
+        "Hygraph"
+      ],
+      "key_stakeholders": [
+        "VP of Engineering"
+      ],
+      "explanation": "The primary risk driver for Acme Corp's renewal is their expressed frustration with the new editor, coupled with their intention to \"explore options,\" specifically mentioning Hygraph as a potential alternative. This sentiment is reflected in their NPS score of 6 and a negative sentiment score of -0.6. Additionally, the significant decline in API calls by 52.2% and active users by 50.0% further underscores their disengagement. The team must schedule a high-priority meeting with Acme Corp's VP of Engineering within the next 7 days to address their concerns and reinforce the value of our solution.",
+      "csm_risk_signals": [
+        "They mentioned their contract is coming up and want to 'explore options.'",
+        "Might be evaluating Hygraph.",
+        "They're frustrated with the new editor."
+      ],
+      "csm_action_items": [
+        "Follow up with leadership regarding the flagged concerns.",
+        "Investigate the specific frustrations with the new editor.",
+        "Assess the evaluation of Hygraph and address any competitive concerns."
+      ]
     },
     {
       "account_id": 1003,
@@ -299,8 +306,8 @@
       "csm_name": "David Kim",
       "contract_end_date": "2026-06-12 00:00:00",
       "days_to_renewal": 58,
-      "risk_score": 0.6085,
-      "risk_tier": "Medium",
+      "risk_score": 0.8085,
+      "risk_tier": "High",
       "sdk_version": "v3.1.2",
       "on_deprecated_sdk": true,
       "on_vulnerable_sdk": false,
@@ -316,18 +323,165 @@
       "key_stakeholders": [
         "VP of Digital"
       ],
-      "explanation": "The primary risk driver for Meridian Health's renewal is the significant decrease in actual usage of the product, as they are transitioning to a homegrown solution. This is evidenced by a 39.0% decline in API calls and a 36.4% drop in active users over the past six months. Additionally, the sentiment score from CSM notes is low at 0.5, indicating concerns about their intent to continue using the product. The team must engage with the VP of Digital within the next 7 days to address their interest in data export APIs and discuss their future with the product.",
+      "explanation": "The primary risk driver for Meridian Health's renewal is the significant decline in actual usage, evidenced by a 39.0% decrease in API calls and a 36.4% drop in active users over the past six months. Additionally, the longest open ticket has remained unresolved for 171 days, indicating potential service issues that could further impact their satisfaction. The team must engage with Meridian Health's VP of Digital within the next 7 days to address these concerns and understand their transition to a custom solution.",
       "csm_risk_signals": [
-        "Actual usage has significantly decreased.",
-        "They are moving content to a homegrown solution.",
-        "The NPS score reflects satisfaction with support, not intent to continue using the product.",
-        "The VP of Digital inquired about data export APIs."
+        "actual usage has cratered",
+        "built a custom middleware layer",
+        "slowly moving content to a homegrown solution",
+        "score reflects the people not that they plan to stay",
+        "classic silent churn pattern"
       ],
       "csm_action_items": [
-        "Follow up with the VP of Digital regarding data export APIs.",
-        "Investigate the reasons behind the decrease in usage.",
-        "Engage with the customer to understand their plans for the homegrown solution."
+        "Discuss data export APIs with the VP of Digital",
+        "Investigate reasons for usage decline",
+        "Explore options to re-engage the customer"
       ]
+    },
+    {
+      "account_id": 1009,
+      "account_name": "Orion Education",
+      "arr": 126000.0,
+      "plan_tier": "Growth",
+      "industry": "Media & Publishing",
+      "region": "APAC",
+      "csm_name": "James Okafor",
+      "contract_end_date": "2026-04-30 00:00:00",
+      "days_to_renewal": 15,
+      "risk_score": 0.5155,
+      "risk_tier": "Medium",
+      "sdk_version": "v4.0.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 8,
+      "nps_anomaly": false,
+      "nps_language": "en",
+      "usage_decline_pct": -25.384217526230234,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 0,
+      "max_open_days": 0,
+      "recurring_count": 0,
+      "competitive_threats": [
+        "WordPress"
+      ],
+      "key_stakeholders": [],
+      "explanation": "The primary risk driver for Orion Education's renewal is the uncertainty surrounding their merger with another ed-tech company that uses WordPress, which raises questions about the future of their current platform. This is compounded by the sentiment score of -0.5, indicating a negative perception among stakeholders, particularly their main advocate, the Director of Content, who is anxious about her role post-merger. Additionally, the API call change of -25.4% over the past six months suggests a decline in engagement that could further jeopardize renewal. The team must engage with Orion Education's leadership within the next 7 days to address their concerns and reinforce the value of our platform amidst the merger discussions.",
+      "csm_risk_signals": [
+        "They are merging with another ed-tech company that uses WordPress.",
+        "Unclear which platform survives.",
+        "Decision expected by May.",
+        "Their champion is nervous about her own role post-merger."
+      ],
+      "csm_action_items": [
+        "Follow up with the Director of Content before the merger decision in May.",
+        "Assess the impact of the merger on the current platform usage.",
+        "Engage with the new ed-tech company to understand their needs."
+      ]
+    },
+    {
+      "account_id": 1013,
+      "account_name": "RedLeaf Healthcare",
+      "arr": 135000.0,
+      "plan_tier": "Growth",
+      "industry": "Media & Publishing",
+      "region": "EMEA",
+      "csm_name": "Sarah Chen",
+      "contract_end_date": "2026-04-27 00:00:00",
+      "days_to_renewal": 12,
+      "risk_score": 0.4955,
+      "risk_tier": "Medium",
+      "sdk_version": "v4.0.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 9,
+      "nps_anomaly": true,
+      "nps_language": "es",
+      "usage_decline_pct": -8.544932656215499,
+      "p1_ticket_count": 1,
+      "open_ticket_count": 2,
+      "max_open_days": 155,
+      "recurring_count": 1,
+      "competitive_threats": [],
+      "key_stakeholders": [],
+      "explanation": "The primary risk driver for RedLeaf Healthcare's renewal is the requirement for a vendor security questionnaire to be completed by May 15, as they have a compliance audit approaching. This urgency is compounded by the longest open ticket, which has remained unresolved for 155 days, indicating potential service issues. To mitigate this risk, the team must prioritize filling out and submitting the vendor security questionnaire within the next 7 days to ensure the renewal process can proceed smoothly.",
+      "csm_risk_signals": [
+        "They need us to fill out a vendor security questionnaire by May 15 or they can't renew."
+      ],
+      "csm_action_items": [
+        "Follow up with the security team regarding the vendor security questionnaire request.",
+        "Ensure the vendor security questionnaire is completed and submitted by May 15.",
+        "Monitor the compliance audit timeline closely."
+      ]
+    },
+    {
+      "account_id": 1012,
+      "account_name": "Quantum Commerce",
+      "arr": 93000.0,
+      "plan_tier": "Growth",
+      "industry": "Travel & Hospitality",
+      "region": "LATAM",
+      "csm_name": "Emily Watson",
+      "contract_end_date": "2026-06-18 00:00:00",
+      "days_to_renewal": 64,
+      "risk_score": 0.4895,
+      "risk_tier": "Medium",
+      "sdk_version": "v4.0.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 6,
+      "nps_anomaly": false,
+      "nps_language": "en",
+      "usage_decline_pct": -13.702543309988943,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 2,
+      "max_open_days": 134,
+      "recurring_count": 1,
+      "competitive_threats": [
+        "builder.io"
+      ],
+      "key_stakeholders": [],
+      "explanation": "The primary risk driver for Quantum Commerce's renewal is their consideration of a competing offer from builder.io, which hinges on the ability to match that offer before the renewal call next week. This is compounded by a significant decline in active users, which has decreased by 30.8%. To address this risk, the team must prioritize preparing a competitive proposal that aligns with the client's needs and expectations within the next 7 days.",
+      "csm_risk_signals": [
+        "They want to add 20 seats but only if we can match a competing offer from builder.io."
+      ],
+      "csm_action_items": [
+        "Prepare a competitive offer to match builder.io for the additional seats.",
+        "Follow up on the renewal call scheduled for next week.",
+        "Monitor API usage trends closely."
+      ]
+    },
+    {
+      "account_id": 1014,
+      "account_name": "BluePeak Software",
+      "arr": 1061000.0,
+      "plan_tier": "Enterprise",
+      "industry": "Media & Publishing",
+      "region": "NA-West",
+      "csm_name": "Raj Patel",
+      "contract_end_date": "2026-04-28 00:00:00",
+      "days_to_renewal": 13,
+      "risk_score": 0.4805,
+      "risk_tier": "Medium",
+      "sdk_version": "v4.0.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 10,
+      "nps_anomaly": true,
+      "nps_language": "fr",
+      "usage_decline_pct": -15.651285314206662,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 0,
+      "max_open_days": 0,
+      "recurring_count": 1,
+      "competitive_threats": [],
+      "key_stakeholders": [
+        "VP of Product"
+      ],
+      "explanation": "The primary risk driver for BluePeak Software's renewal is their dissatisfaction with the management console UI, which they described as \"embarrassing to demo to stakeholders,\" indicating a high risk of churn. Supporting this concern, the sentiment score from CSM notes is -0.5, reflecting negative feelings towards the product. The team must engage with BluePeak Software's VP of Product within the next 7 days to address their concerns and explore potential solutions to improve their experience.",
+      "csm_risk_signals": [
+        "They renewed last year with reluctance.",
+        "On the fence this time."
+      ],
+      "csm_action_items": []
     },
     {
       "account_id": 1010,
@@ -354,17 +508,52 @@
       "recurring_count": 2,
       "competitive_threats": [],
       "key_stakeholders": [],
-      "explanation": "The primary risk driver for TerraFirma Manufacturing's renewal is their incomplete migration from Drupal, which has led to significant implementation challenges and a negative sentiment score of -0.5. Additionally, there has been a substantial decline in active users, with a change of -46.2% over the past six months. To mitigate this risk, the team must arrange for a dedicated Solutions Architect to assist TerraFirma in resolving their implementation issues within the next 7 days.",
+      "explanation": "The primary risk driver for TerraFirma Manufacturing's renewal is their incomplete migration from Drupal, which has led to significant implementation challenges and a sentiment score of -0.5. Additionally, there has been a notable decline in active users by 46.2%, indicating potential disengagement with the product. To mitigate this risk, the team must arrange for a dedicated Solutions Architect to assist TerraFirma for two weeks within the next 7 days.",
       "csm_risk_signals": [
+        "Might not renew unless we can give them a dedicated SA for 2 weeks to clean it up.",
         "Their current implementation is a mess.",
-        "They never finished the original migration from Drupal 18 months ago.",
-        "Half their content is still on the old system.",
-        "Might not renew unless we can give them a dedicated SA for 2 weeks to clean it up."
+        "They never finished the original migration from Drupal 18 months ago."
       ],
       "csm_action_items": [
         "Provide a dedicated SA for 2 weeks to assist with the implementation.",
-        "Follow up on their interest in the new Agent OS features.",
-        "Check on the status of their migration from Drupal."
+        "Follow up on the interest in the new Agent OS features.",
+        "Check on the status of the migration from Drupal."
+      ]
+    },
+    {
+      "account_id": 1017,
+      "account_name": "Pacific Rim Trading",
+      "arr": 1724000.0,
+      "plan_tier": "Enterprise",
+      "industry": "SaaS / Technology",
+      "region": "NA-West",
+      "csm_name": "Carlos Mendez",
+      "contract_end_date": "2026-06-10 00:00:00",
+      "days_to_renewal": 56,
+      "risk_score": 0.4525,
+      "risk_tier": "Medium",
+      "sdk_version": "v4.0.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 5,
+      "nps_anomaly": false,
+      "nps_language": "zh",
+      "usage_decline_pct": -20.36690828386194,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 1,
+      "max_open_days": 109,
+      "recurring_count": 1,
+      "competitive_threats": [],
+      "key_stakeholders": [],
+      "explanation": "The primary risk driver for Pacific Rim Trading's renewal is the rocky relationship with the Customer Success Manager (CSM), evidenced by the customer's request for a new CSM twice. Additionally, the sentiment score of -0.3 indicates dissatisfaction, which could impact renewal decisions. The team must prioritize addressing the CSM relationship by facilitating a meeting between the customer and a senior CSM within the next 7 days to discuss their concerns and improve engagement.",
+      "csm_risk_signals": [
+        "CSM relationship has been rocky",
+        "they've requested a new CSM twice"
+      ],
+      "csm_action_items": [
+        "Get last NPS comment translated",
+        "Monitor usage metrics closely",
+        "Address CSM relationship concerns"
       ]
     },
     {
@@ -394,200 +583,18 @@
       "key_stakeholders": [
         "IT director"
       ],
-      "explanation": "The primary risk driver for Northstar Logistics' renewal is their low product usage, evidenced by only 2 active users out of 15 seats and a significant preference expressed by their IT director to downgrade to a Starter plan. This is further supported by a 16.7% decrease in active users over the past six months. The team must engage with the IT director within the next 7 days to address their concerns and explore strategies to improve product adoption and usage.",
+      "explanation": "The primary risk driver for Northstar Logistics' renewal is the significant decline in product usage, evidenced by only 2 active users out of 15 seats and the IT director's expressed preference to downgrade rather than continue paying for underutilized services. This sentiment is further supported by a 16.7% decrease in active users over the past six months. The team must engage with the IT director within the next 7 days to discuss potential solutions for increasing product adoption and addressing their concerns about value.",
       "csm_risk_signals": [
-        "They barely use the product with only 2 active users out of 15 seats.",
+        "They barely use the product.",
         "Most content was migrated but nobody adopted the new workflow.",
-        "The IT director expressed a preference to downgrade to Starter rather than pay full price.",
-        "There is significant ARR contraction risk."
+        "Their IT director told me they'd rather downgrade to Starter than pay full price for something they don't use.",
+        "Classic shelfware situation.",
+        "Significant ARR contraction risk."
       ],
       "csm_action_items": [
-        "Engage with the IT director to discuss usage and adoption strategies.",
-        "Explore options for product training or support to improve user engagement.",
-        "Assess the feasibility of a downgrade to the Starter plan."
-      ]
-    },
-    {
-      "account_id": 1014,
-      "account_name": "BluePeak Software",
-      "arr": 1061000.0,
-      "plan_tier": "Enterprise",
-      "industry": "Media & Publishing",
-      "region": "NA-West",
-      "csm_name": "Raj Patel",
-      "contract_end_date": "2026-04-28 00:00:00",
-      "days_to_renewal": 13,
-      "risk_score": 0.4205,
-      "risk_tier": "Medium",
-      "sdk_version": "v4.0.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 10,
-      "nps_anomaly": true,
-      "nps_language": "fr",
-      "usage_decline_pct": -15.651285314206662,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 0,
-      "max_open_days": 0,
-      "recurring_count": 1,
-      "competitive_threats": [],
-      "key_stakeholders": [
-        "VP of Product"
-      ],
-      "explanation": "The primary risk driver for BluePeak Software's renewal is their dissatisfaction with the management console UI, as indicated by their developer-heavy team\u2019s feedback and previous reluctance to renew. This sentiment is further supported by a negative sentiment score of -0.2 and a history of a low NPS score of 6. The team must engage with BluePeak Software's VP of Product within the next 7 days to address their concerns and demonstrate improvements in the user experience to facilitate a successful renewal.",
-      "csm_risk_signals": [
-        "They renewed last year with reluctance.",
-        "On the fence this time.",
-        "NPS was 6."
-      ],
-      "csm_action_items": []
-    },
-    {
-      "account_id": 1012,
-      "account_name": "Quantum Commerce",
-      "arr": 93000.0,
-      "plan_tier": "Growth",
-      "industry": "Travel & Hospitality",
-      "region": "LATAM",
-      "csm_name": "Emily Watson",
-      "contract_end_date": "2026-06-18 00:00:00",
-      "days_to_renewal": 64,
-      "risk_score": 0.3995,
-      "risk_tier": "Medium",
-      "sdk_version": "v4.0.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 6,
-      "nps_anomaly": false,
-      "nps_language": "en",
-      "usage_decline_pct": -13.702543309988943,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 2,
-      "max_open_days": 134,
-      "recurring_count": 1,
-      "competitive_threats": [
-        "builder.io"
-      ],
-      "key_stakeholders": [],
-      "explanation": "The primary risk driver for Quantum Commerce's renewal is their desire to add 20 seats contingent on matching a competing offer from builder.io, indicating potential dissatisfaction with our pricing or service. Supporting this risk, their active user change has decreased by 30.8%, suggesting reduced engagement with our platform. The team must prepare for the upcoming renewal call by gathering competitive pricing information and formulating a strategy to address their concerns within the next 7 days.",
-      "csm_risk_signals": [
-        "They want to add 20 seats but only if we can match a competing offer."
-      ],
-      "csm_action_items": [
-        "Prepare a competitive offer to match builder.io's pricing.",
-        "Discuss the renewal call scheduled for next week.",
-        "Confirm the current API usage metrics for the call."
-      ]
-    },
-    {
-      "account_id": 1017,
-      "account_name": "Pacific Rim Trading",
-      "arr": 1724000.0,
-      "plan_tier": "Enterprise",
-      "industry": "SaaS / Technology",
-      "region": "NA-West",
-      "csm_name": "Carlos Mendez",
-      "contract_end_date": "2026-06-10 00:00:00",
-      "days_to_renewal": 56,
-      "risk_score": 0.3625,
-      "risk_tier": "Low",
-      "sdk_version": "v4.0.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 5,
-      "nps_anomaly": false,
-      "nps_language": "zh",
-      "usage_decline_pct": -20.36690828386194,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 1,
-      "max_open_days": 109,
-      "recurring_count": 1,
-      "competitive_threats": [],
-      "key_stakeholders": [],
-      "explanation": "",
-      "csm_risk_signals": [
-        "CSM relationship has been rocky.",
-        "They've requested a new CSM twice.",
-        "Contract up in May."
-      ],
-      "csm_action_items": [
-        "Get the last NPS comment translated.",
-        "Follow up on the request for a new CSM.",
-        "Prepare for contract renewal discussions in May."
-      ]
-    },
-    {
-      "account_id": 1013,
-      "account_name": "RedLeaf Healthcare",
-      "arr": 135000.0,
-      "plan_tier": "Growth",
-      "industry": "Media & Publishing",
-      "region": "EMEA",
-      "csm_name": "Sarah Chen",
-      "contract_end_date": "2026-04-27 00:00:00",
-      "days_to_renewal": 12,
-      "risk_score": 0.3455,
-      "risk_tier": "Low",
-      "sdk_version": "v4.0.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 9,
-      "nps_anomaly": true,
-      "nps_language": "es",
-      "usage_decline_pct": -8.544932656215499,
-      "p1_ticket_count": 1,
-      "open_ticket_count": 2,
-      "max_open_days": 155,
-      "recurring_count": 1,
-      "competitive_threats": [],
-      "key_stakeholders": [],
-      "explanation": "",
-      "csm_risk_signals": [
-        "They need us to fill out a vendor security questionnaire by May 15 or they can't renew.",
-        "I submitted the request to our security team on 3/20 but haven't gotten a response.",
-        "This is time-sensitive."
-      ],
-      "csm_action_items": [
-        "Follow up with the security team regarding the vendor security questionnaire.",
-        "Ensure the vendor security questionnaire is completed by the deadline.",
-        "Communicate urgency to the security team about the compliance audit."
-      ]
-    },
-    {
-      "account_id": 1009,
-      "account_name": "Orion Education",
-      "arr": 126000.0,
-      "plan_tier": "Growth",
-      "industry": "Media & Publishing",
-      "region": "APAC",
-      "csm_name": "James Okafor",
-      "contract_end_date": "2026-04-30 00:00:00",
-      "days_to_renewal": 15,
-      "risk_score": 0.2855,
-      "risk_tier": "Low",
-      "sdk_version": "v4.0.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 8,
-      "nps_anomaly": false,
-      "nps_language": "en",
-      "usage_decline_pct": -25.384217526230234,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 0,
-      "max_open_days": 0,
-      "recurring_count": 0,
-      "competitive_threats": [],
-      "key_stakeholders": [],
-      "explanation": "",
-      "csm_risk_signals": [
-        "They are merging with another ed-tech company, which creates uncertainty.",
-        "The decision on which platform survives is expected by May.",
-        "Their champion is nervous about her own role post-merger."
-      ],
-      "csm_action_items": [
-        "Follow up after the merger decision in May.",
-        "Engage with the Director of Content to address her concerns.",
-        "Monitor the integration process with the other ed-tech company."
+        "Discuss potential downgrade options with the customer.",
+        "Explore reasons for low adoption of the new workflow.",
+        "Identify opportunities to increase product usage."
       ]
     },
     {
@@ -600,8 +607,8 @@
       "csm_name": "Priya Sharma",
       "contract_end_date": "2026-07-11 00:00:00",
       "days_to_renewal": 87,
-      "risk_score": 0.2795,
-      "risk_tier": "Low",
+      "risk_score": 0.4295,
+      "risk_tier": "Medium",
       "sdk_version": "v4.0.0",
       "on_deprecated_sdk": false,
       "on_vulnerable_sdk": true,
@@ -615,13 +622,55 @@
       "recurring_count": 2,
       "competitive_threats": [],
       "key_stakeholders": [],
+      "explanation": "The primary risk driver for Evergreen Media's renewal is the ongoing review of all vendor contracts due to the recent acquisition of their parent company, which has led to requests for enterprise-level SLAs on their Growth plan pricing. This situation is compounded by a significant decline in active users, with a change of -24.7% over the past six months. The team must engage with the new procurement team within the next 7 days to address their concerns and clarify the terms of the renewal to mitigate potential risks.",
+      "csm_risk_signals": [
+        "All vendor contracts are under review due to the parent company acquisition.",
+        "New procurement team is asking for enterprise-level SLAs on their Growth plan pricing."
+      ],
+      "csm_action_items": [
+        "Engage with the new procurement team to understand their requirements.",
+        "Prepare to negotiate enterprise-level SLAs.",
+        "Monitor the impact of the parent company acquisition on vendor contracts."
+      ]
+    },
+    {
+      "account_id": 1011,
+      "account_name": "Skyline Travel",
+      "arr": 310000.0,
+      "plan_tier": "Scale",
+      "industry": "Financial Services",
+      "region": "LATAM",
+      "csm_name": "Priya Sharma",
+      "contract_end_date": "2026-05-24 00:00:00",
+      "days_to_renewal": 39,
+      "risk_score": 0.3065,
+      "risk_tier": "Low",
+      "sdk_version": "v4.1.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 7,
+      "nps_anomaly": false,
+      "nps_language": "en",
+      "usage_decline_pct": 3.54276298304364,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 1,
+      "max_open_days": 12,
+      "recurring_count": 0,
+      "competitive_threats": [],
+      "key_stakeholders": [
+        "PM"
+      ],
       "explanation": "",
       "csm_risk_signals": [
-        "The parent company was acquired, leading to a review of all vendor contracts.",
-        "The new procurement team is requesting enterprise-level SLAs on their Growth plan pricing.",
-        "The situation is described as a negotiation game."
+        "Could go either way on renewal",
+        "Struggling with locale management",
+        "Filed 3 tickets about locale fallback behavior"
       ],
-      "csm_action_items": []
+      "csm_action_items": [
+        "Follow up on the tickets filed regarding locale fallback behavior",
+        "Schedule a meeting with the PM to discuss concerns",
+        "Monitor SDK upgrade path to ensure they move to a supported version"
+      ]
     },
     {
       "account_id": 1028,
@@ -653,6 +702,43 @@
       "csm_action_items": []
     },
     {
+      "account_id": 1008,
+      "account_name": "Crescent Labs",
+      "arr": 390000.0,
+      "plan_tier": "Scale",
+      "industry": "Media & Publishing",
+      "region": "NA-East",
+      "csm_name": "James Okafor",
+      "contract_end_date": "2026-07-02 00:00:00",
+      "days_to_renewal": 78,
+      "risk_score": 0.253,
+      "risk_tier": "Low",
+      "sdk_version": "v4.1.0",
+      "on_deprecated_sdk": false,
+      "on_vulnerable_sdk": true,
+      "nps_score": 5,
+      "nps_anomaly": false,
+      "nps_language": "en",
+      "usage_decline_pct": 12.043972150971053,
+      "p1_ticket_count": 0,
+      "open_ticket_count": 0,
+      "max_open_days": 0,
+      "recurring_count": 1,
+      "competitive_threats": [],
+      "key_stakeholders": [
+        "new VP of Marketing"
+      ],
+      "explanation": "",
+      "csm_risk_signals": [
+        "Their new VP of Marketing wants to see an ROI report before signing off on renewal.",
+        "Asked for case studies in their vertical (biotech)."
+      ],
+      "csm_action_items": [
+        "Work with marketing to prepare an ROI report.",
+        "Gather case studies in the biotech vertical."
+      ]
+    },
+    {
       "account_id": 1026,
       "account_name": "Golden Gate Ventures",
       "arr": 65000.0,
@@ -680,84 +766,6 @@
       "explanation": "",
       "csm_risk_signals": [],
       "csm_action_items": []
-    },
-    {
-      "account_id": 1008,
-      "account_name": "Crescent Labs",
-      "arr": 390000.0,
-      "plan_tier": "Scale",
-      "industry": "Media & Publishing",
-      "region": "NA-East",
-      "csm_name": "James Okafor",
-      "contract_end_date": "2026-07-02 00:00:00",
-      "days_to_renewal": 78,
-      "risk_score": 0.163,
-      "risk_tier": "Low",
-      "sdk_version": "v4.1.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 5,
-      "nps_anomaly": false,
-      "nps_language": "en",
-      "usage_decline_pct": 12.043972150971053,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 0,
-      "max_open_days": 0,
-      "recurring_count": 1,
-      "competitive_threats": [],
-      "key_stakeholders": [
-        "VP of Marketing"
-      ],
-      "explanation": "",
-      "csm_risk_signals": [
-        "The new VP of Marketing wants to see an ROI report before signing off on renewal.",
-        "They asked for case studies in their vertical (biotech), which we do not have ready.",
-        "Usage is stable but not growing."
-      ],
-      "csm_action_items": [
-        "Work with marketing to prepare an ROI report.",
-        "Gather case studies in the biotech vertical.",
-        "Monitor usage trends closely."
-      ]
-    },
-    {
-      "account_id": 1011,
-      "account_name": "Skyline Travel",
-      "arr": 310000.0,
-      "plan_tier": "Scale",
-      "industry": "Financial Services",
-      "region": "LATAM",
-      "csm_name": "Priya Sharma",
-      "contract_end_date": "2026-05-24 00:00:00",
-      "days_to_renewal": 39,
-      "risk_score": 0.1565,
-      "risk_tier": "Low",
-      "sdk_version": "v4.1.0",
-      "on_deprecated_sdk": false,
-      "on_vulnerable_sdk": true,
-      "nps_score": 7,
-      "nps_anomaly": false,
-      "nps_language": "en",
-      "usage_decline_pct": 3.54276298304364,
-      "p1_ticket_count": 0,
-      "open_ticket_count": 1,
-      "max_open_days": 12,
-      "recurring_count": 0,
-      "competitive_threats": [],
-      "key_stakeholders": [
-        "PM"
-      ],
-      "explanation": "",
-      "csm_risk_signals": [
-        "They are struggling with locale management.",
-        "Filed 3 tickets about locale fallback behavior.",
-        "On SDK v4.0, they missed the fix in v4.2."
-      ],
-      "csm_action_items": [
-        "Schedule a follow-up call with the PM.",
-        "Address the locale management issues.",
-        "Monitor the impact of SDK version on their experience."
-      ]
     },
     {
       "account_id": 1019,
@@ -844,11 +852,7 @@
       "key_stakeholders": [],
       "explanation": "",
       "csm_risk_signals": [],
-      "csm_action_items": [
-        "Prepare for renewal and expansion in May.",
-        "Coordinate with the finance team for budget allocation.",
-        "Plan for the onboarding of additional seats."
-      ]
+      "csm_action_items": []
     },
     {
       "account_id": 1025,
@@ -964,9 +968,7 @@
       "key_stakeholders": [],
       "explanation": "",
       "csm_risk_signals": [],
-      "csm_action_items": [
-        "Finalize renewal by end of April."
-      ]
+      "csm_action_items": []
     },
     {
       "account_id": 1022,
@@ -1053,10 +1055,26 @@
       "key_stakeholders": [],
       "explanation": "",
       "csm_risk_signals": [],
-      "csm_action_items": []
+      "csm_action_items": [
+        "Follow up on integration with Shopify Plus.",
+        "Provide information on marketplace connectors.",
+        "Schedule a check-in closer to renewal date."
+      ]
     }
   ],
   "insights": [
+    {
+      "title": "Stale Open Tickets in High-ARR Accounts",
+      "description": "Pinnacle Media Group (ID 1004) has 2 open tickets with a maximum open days of 100, and an ARR of 203,000. This indicates a risk of churn due to unresolved issues.",
+      "affected_accounts": [
+        1004
+      ],
+      "affected_account_names": [
+        "Pinnacle Media Group"
+      ],
+      "severity": "critical",
+      "action": "Prioritize resolution of open tickets."
+    },
     {
       "title": "Compliance Risk: Deprecated SDK in Regulated Industries",
       "description": "2 regulated-industry account(s) (Vanguard Retail, Atlas Financial) are still on deprecated SDK versions with security patches ending April 30, 2026. For healthcare and financial services customers this is a potential compliance violation, not just a technical inconvenience.",
@@ -1086,29 +1104,31 @@
       "action": "Investigate customer engagement strategies."
     },
     {
-      "title": "Stale Open Tickets in High-ARR Accounts",
-      "description": "Pinnacle Media Group (ID 1004) has 2 open tickets for 100 days and an ARR of 203,000. Similarly, NovaTech Industries (ID 1002) has 3 open tickets for 192 days with an ARR of 29,000, indicating potential service issues.",
+      "title": "C-Suite Involvement with Negative Sentiment",
+      "description": "Vanguard Retail (ID 1005) has an ops manager as an executive and a negative CSM sentiment of -0.7. This suggests potential issues at the executive level that could impact renewal.",
       "affected_accounts": [
-        1002,
-        1004
+        1005
       ],
       "affected_account_names": [
-        "NovaTech Industries",
-        "Pinnacle Media Group"
+        "Vanguard Retail"
       ],
       "severity": "high",
-      "action": "Prioritize resolution of open tickets."
+      "action": "Engage with the executive to address concerns."
     },
     {
       "title": "Silent Churn: High NPS Masking Real Risk",
-      "description": "2 account(s) (BrightPath Solutions, Atlas Financial) score NPS \u22658 but show >20% API call decline and negative CSM sentiment. This is a classic silent churn pattern \u2014 customers like the support team but are quietly migrating away from the product.",
+      "description": "4 account(s) (BrightPath Solutions, Meridian Health, Atlas Financial, Orion Education) score NPS \u22658 but show >20% API call decline and negative CSM sentiment. This is a classic silent churn pattern \u2014 customers like the support team but are quietly migrating away from the product.",
       "affected_accounts": [
         1001,
-        1006
+        1003,
+        1006,
+        1009
       ],
       "affected_account_names": [
         "BrightPath Solutions",
-        "Atlas Financial"
+        "Meridian Health",
+        "Atlas Financial",
+        "Orion Education"
       ],
       "severity": "high",
       "action": "Do not rely on NPS alone for health scoring. Prioritize product usage telemetry and schedule a direct usage review call."
@@ -1168,36 +1188,22 @@
       "action": "Force-resolve or formally escalate all tickets older than 30 days before renewal conversations begin. Track as a renewal blocker."
     },
     {
-      "title": "C-suite Involvement with Negative Sentiment",
-      "description": "Vanguard Retail (ID 1005) has a C-suite executive (ops manager) and a negative sentiment score of -0.8. Similarly, Meridian Health (ID 1003) has a VP of Digital with a sentiment of 0.5, indicating potential issues despite C-suite involvement.",
+      "title": "Shared Competitors Across Accounts",
+      "description": "NovaTech Industries (ID 1002) and Meridian Health (ID 1003) both list Strapi as a competitor. This indicates a shared market challenge that could affect their renewal decisions.",
       "affected_accounts": [
-        1003,
-        1005
+        1002,
+        1003
       ],
       "affected_account_names": [
-        "Meridian Health",
-        "Vanguard Retail"
+        "NovaTech Industries",
+        "Meridian Health"
       ],
       "severity": "medium",
-      "action": "Engage C-suite for feedback and resolution."
-    },
-    {
-      "title": "Non-English NPS Comments",
-      "description": "RedLeaf Healthcare (ID 1013) has an NPS anomaly with comments in Spanish, while BluePeak Software (ID 1014) has comments in French. This indicates a need for multilingual support and understanding of diverse customer feedback.",
-      "affected_accounts": [
-        1013,
-        1014
-      ],
-      "affected_account_names": [
-        "RedLeaf Healthcare",
-        "BluePeak Software"
-      ],
-      "severity": "medium",
-      "action": "Enhance multilingual customer support."
+      "action": "Analyze competitive positioning for these accounts."
     },
     {
       "title": "Non-English NPS Comments at Risk of Being Ignored",
-      "description": "4 renewing account(s) (RedLeaf Healthcare, BluePeak Software, Northstar Logistics, Pacific Rim Trading) submitted NPS feedback in zh, fr, es. One Mandarin comment explicitly mentions requesting a new CSM multiple times with no response. These signals are invisible to teams that rely solely on automated sentiment scoring of English text.",
+      "description": "4 renewing account(s) (RedLeaf Healthcare, BluePeak Software, Northstar Logistics, Pacific Rim Trading) submitted NPS feedback in zh, es, fr. One Mandarin comment explicitly mentions requesting a new CSM multiple times with no response. These signals are invisible to teams that rely solely on automated sentiment scoring of English text.",
       "affected_accounts": [
         1013,
         1014,

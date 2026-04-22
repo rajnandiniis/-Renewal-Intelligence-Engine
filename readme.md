@@ -16,7 +16,9 @@ A prototype tool for Contentstack's BizOps team to identify at-risk renewals bef
                                ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                    DATA RECONCILIATION                          │
-│  • Fuzzy name matching (difflib + manual corrections)           │
+│  • Multi-layer name matching (RapidFuzz full + partial
+   + Jellyfish phonetic)
+   • Eliminated manual typo corrections (fully automated matching)│
 │  • Multi-strategy account ID resolution                         │
 │  • Language detection for NPS comments                          │
 └──────────────────────────────┬──────────────────────────────────┘
@@ -96,6 +98,16 @@ All LLM calls include full product context (changelog deprecation dates, CVEs) s
 ### 5. Ticket Age as a Signal
 Open ticket age (days since creation) is tracked and surfaced. Tickets open for 45+ days at renewal time are a leading indicator of contention — customers use unresolved issues as leverage for discounts or as justification to evaluate alternatives. This is not captured in a simple P1-count feature.
 
+
+### 6. Name Matching Improvements
+The original system relied on basic fuzzy matching and manual typo corrections, which caused silent failures when names were misspelled, partially written, or formatted differently.
+
+This was replaced with a three-layer matching pipeline:
+- RapidFuzz full match for standard similarity
+- RapidFuzz partial match for incomplete names (e.g., "NovaTech")
+- Jellyfish phonetic matching for sound-based errors (e.g., "falkon" → "falcon")
+
+This ensures robust handling of typos, partial names, and phonetic variations without requiring manual intervention.
 ---
 
 ## Tradeoffs
@@ -103,11 +115,23 @@ Open ticket age (days since creation) is tracked and surfaced. Tickets open for 
 | Decision | Tradeoff | Rationale |
 |---|---|---|
 | Rule-based scoring + LLM enhancement | Less sophisticated than a trained ML model | Interpretable, auditable, sufficient for a prototype; no historical churn labels available |
-| Fuzzy matching for name reconciliation | May miss low-similarity matches | Handles the intentional inconsistencies in the dataset cleanly |
+| Multi-layer matching (RapidFuzz + Jellyfish)| May miss low-similarity matches | Handles the intentional inconsistencies in the dataset cleanly |
 | Flag NPS anomalies vs. discard them | Partial signal loss | Using corrupted data confidently is worse than down-weighting it |
 | Anthropic SDK (Claude) | Not using OpenAI | Claude's instruction-following and JSON output reliability is strong; aligns with the Anthropic context |
 | Separate deprecated vs. vulnerable SDK tracks | Slightly more complex | CVE-2026-1102 affects v4.x accounts that think they are safe — conflating the two would miss this |
 | 90-day renewal window | May miss medium-term risk | Aligns with assignment scope; production would extend to 180 days |
+
+### Real-World Validation
+A key issue was identified with Meridian Health, where risk was incorrectly scored as Medium due to:
+- Name extraction failure (lowercase + formatting issue)
+- Misinterpretation of positive tone masking churn signals
+
+Fixes applied:
+- Improved matching + extraction logic
+- Enhanced LLM prompt to detect silent churn patterns
+
+Result:
+Risk score corrected from Medium → High, aligning with actual business signals.
 
 ---
 
