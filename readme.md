@@ -7,7 +7,7 @@ A prototype tool for Contentstack's BizOps team to identify at-risk renewals bef
 ## Demo
 
 ### Video Walkthrough
-[Click here to watch the demo video](https://drive.google.com/file/d/1xN15E_SVFfStClrmzNgJWNcsOtXJQsxk/view?usp=drive_link)
+[Click here to watch the demo video](https://youtu.be/FCMGr57-sjk)
 
 ---
 
